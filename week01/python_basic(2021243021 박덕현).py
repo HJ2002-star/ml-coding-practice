@@ -357,5 +357,7 @@ print(str(3)) #x를 문자열 형태로 변환
 print(list("Python"))
 print((1,2,3))
 
+# x를 튜플로 반환
 print(tuple([1,2,3]))
+
 
