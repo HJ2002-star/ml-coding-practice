@@ -135,3 +135,20 @@ a = [3, 4, 1, 9]
 a.reverse()
 print(a)
 
+# 원소 위치 확인
+print(a.index(9))
+
+# 원소 삽입
+a.insert(0, 99)
+print(a)
+
+#원소 삭제
+a.remove(99)
+print(a)
+
+b = [1, 2, 3]
+print(b.pop())
+print(b)
+
+print(b.pop(0))
+print(b)
