@@ -209,3 +209,25 @@ for key in dic.keys():
 print(dic.values())
 print(list(dic.values()))
 
+# key, value 쌍 구하기
+print(dic.items())
+
+for key, value in dic.items():
+    print(key + ":" + value)
+
+# 원소 삭제
+dic.clear()
+print(dic)
+
+# 집합 만들기
+s1 = {1, 2, 'a', 5}
+s2 = set([1, 2, 3, 4, 5, 6])
+print(s2)
+s3 = set([4, 5, 6, 7, 8, 9])
+print(s3)
+
+# 교집합 연산
+print(s2 & s3)
+print(s2.intersection(s3))
+
+print(s2 | s3)
