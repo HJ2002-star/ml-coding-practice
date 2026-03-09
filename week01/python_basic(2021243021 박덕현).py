@@ -319,7 +319,7 @@ def sum2(*args):
 a=5
 b=3
 
-print(sum(a,b))
+print(sum1(a,b))
 print(sum1(3,5))
 print(sum2(1,2,3,4,5))
 print(sum2(2,3.5,10))
