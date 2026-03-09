@@ -358,6 +358,27 @@ print(list("Python"))
 print((1,2,3))
 
 # x를 튜플로 반환
+print(tuple("Python"))
 print(tuple([1,2,3]))
+
+# x의 자료형을 반환
+print(type("abc"))
+print(type(a))
+
+# 간단한 삽입형 함수 생성
+sum = lambda a, b: a+b
+
+print(sum(3,5))
+
+# 최대, 최소값 반환
+print(max([1,4,2,8,6]))
+print(max("Python"))
+
+print(min([1,4,2,8,6]))
+print(min("Python"))
+
+# x의 y제곱 결과값 반환
+print(pow(2 ,4))
+
 
 
