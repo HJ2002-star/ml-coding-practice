@@ -240,3 +240,30 @@ print(s3 -s2)
 print(s2.difference(s3))
 print(s3.difference(s2))
 
+# 원소 한 개 추가
+s2.add(7)
+print(s2)
+
+# 원소 여러 개 추가
+s2.update([6, 7, 8, 9, 10])
+print(s2)
+
+# 특정 원소 제거
+s2.remove(7)
+print(s2)
+
+s2 = set([1, 2, 3, 4, 5, 6, 3, 1, 6])
+print(s2)
+
+# 비교 연산자
+x = 3
+y = 2
+print(x == y)
+print(x != y)
+print(x >= y)
+
+# 조건의 연결
+money = 1300
+if money >= 1200 and money < 3500:
+    print('버스를 탈 수 있습니다.')
+    
