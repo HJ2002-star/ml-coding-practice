@@ -24,3 +24,10 @@ print(s3)
 head = "Python"
 tail = "is fun"
 print(head + tail)
+
+# 문자열 곱하기
+print(head * 2)
+print("=" * 5)
+
+# 문자열 인덱싱
+a = "Now is better than never"
