@@ -37,7 +37,7 @@ print(a[-1])
 print(a[-2])
 
 # 문자열 슬라이싱
-b= a[0] + a[1] + a[2]
+b = a[0] + a[1] + a[2]
 print(b)
 
 print(a[4:6])
@@ -53,4 +53,8 @@ print(a.count('p'))
 print(a.find('y'))
 print(a.find('p'))
 print(a.index('y'))
-# print(a.index('p'))
+# print(a.index('p')) # 오류 발생
+
+# 문자 삽입
+b = ","
+c = b
