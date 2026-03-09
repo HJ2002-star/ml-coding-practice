@@ -438,3 +438,13 @@ for i in range(6,11):
 f.close
 
 # 파일 모드 'r' -readline()
+f= open('example.txt','r')
+
+while True:
+    line = f.readline()
+    if not line: break
+    print(lune)
+
+f.close()
+
+# 파일 모드 'r' -readlines()
