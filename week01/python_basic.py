@@ -136,4 +136,7 @@ a = [3, 4, 1, 9]
 a.reverse()
 print(a)
 
-
+# 원소 순서 뒤집기
+a = [3, 4, 1, 9]
+a.reverse()
+print(a)
