@@ -236,6 +236,11 @@ print(s2.intersection(s3))
 print(s2 | s3)
 print(s2.union(s3))
 
+# 차집합 연산
+print(s2 - s3)
+print(s3 - s2)
+print(s2.difference(s3))
+print(s3.difference(s2))
 
 
 
