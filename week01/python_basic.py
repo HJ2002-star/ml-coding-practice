@@ -64,3 +64,9 @@ print(c)
 # 대소문자 변환
 print(a.upper())
 print(a.lower())
+
+# 공백 제거
+d = "           py          "
+print(d.lstrip())
+print(d.rstrip())
+print(d.strip())
