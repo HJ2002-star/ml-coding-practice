@@ -274,3 +274,5 @@ print(1 in [1, 2, 3])
 print(x in [1, 2, 3])
 print('a' in ['a', 'b', 'c', 'd'])
 print('i' not in 'Python')
+
+# 아무 것도 하지 않게 설정
