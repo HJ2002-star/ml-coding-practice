@@ -7,3 +7,10 @@ print(a ** b)
 print(a ** 3)
 
 # 나머지 연산
+print(a % b)
+print(7 % 3)
+
+# 나눗셈 몫 구하기
+print(a // b)
+print(7 // 3)
+
