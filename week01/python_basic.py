@@ -287,4 +287,7 @@ else:
 # for 반복문1
 test_list = ['one', 'two', 'three']
 for i in test_list:
+    x = i + '!'
+    print(x)
+    
     
