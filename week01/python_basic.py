@@ -456,7 +456,7 @@ print(lines)
 
 for line in lines:
     print(line)
-f.close
+f.close()
 
 # 파일 모드 'r' - read()
 f = open('example.txt','r')
