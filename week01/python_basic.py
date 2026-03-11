@@ -418,3 +418,12 @@ pandas.DataFrame()
 from datetime import datetime
 datetime.now()
 
+# 파일 객체 생성
+f = open('example.txt','w')
+print(f)
+
+# 파일 닫기
+f.close()
+
+# 파일 쓰기
+f = open('')
