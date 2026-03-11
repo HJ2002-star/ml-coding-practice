@@ -352,6 +352,15 @@ print(dir([1, 2, 3]))
 print(dir({'1':'a'}))
 print(dir(1))
 
-# x를 리스트로 변환
+
 print(int('3'))
+print(str(3))
+
+# x를 리스트로 반환
+print(list("Python"))
 print((1, 2, 3))
+
+# x를 튜플로 반환
+print(tuple("Python"))
+print(tuple([1, 2, 3]))
+
