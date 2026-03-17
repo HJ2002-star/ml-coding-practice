@@ -62,5 +62,6 @@ more2015_tv = netflix[(netflix['release_year'] > 2015) & (netflix['type'] == 'TV
 print(more2015_tv.head())
 
 data = {
-    'name' : ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', ]
+    'name' : ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah']
+    'comment_length' : ['']
 }
