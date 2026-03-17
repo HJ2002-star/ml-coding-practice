@@ -44,3 +44,9 @@ print(sample_df.drop(['var_1','var_2'],axis =1))
 print(sample_df.drop(['a','b','c'],axis =0))# 행을 제거하려면 axis = 0 디폴트로 사용
 
 netflix = pd.read_csv('2.1.1.netflix.csv')
+print(netflix.head())
+
+print(netflix['release_year'])
+print(netflix['release_year'] > 2015)
+
+more2015 = netflix[netflix['release_year'] > 2015]
