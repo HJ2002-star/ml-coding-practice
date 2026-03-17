@@ -87,6 +87,14 @@ winner_df = df[condition]
 print(winner_df)
 
 print(sample_df.reset_index())
+
 print(sample_df.reset_index(drop=True)) # 기존 인덱스는 제거하기
 
 print(sample_df.set_index('var_1'))
+
+
+print(sample_df.describe())
+print(sample_df.std())
+print(sample_df.agg(['count','mean','std','min','max']))
+
+file_url = 'https://media.githubusercontent.com/media/musthave-ML10/data_source/main/iris.csv'
