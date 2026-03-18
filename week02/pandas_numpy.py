@@ -135,6 +135,7 @@ data = {
     'english' : [90, 87, 85, 88, 92]
 }
 
+
 # Dataframe 생성
 df = pd.DataFrame(data)
 print(df.head())
@@ -146,7 +147,6 @@ print(df)
 # 이름과 평균값만을 포함하는 새로운 데이터프레임 생성
 average_df = df[['name', 'average']]
 print(average_df)
-
 
 # 2.2 넘파이
 import numpy as np
