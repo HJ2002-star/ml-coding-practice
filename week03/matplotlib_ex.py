@@ -206,3 +206,13 @@ plt.savefig('Figure09.png')
 plt.close()
 
 """### **바이올린 플롯 : 승객 등급에다른 나이 분포 표시하기**"""
+
+# 결측치 처리
+titanic['Age'] = titanic['Age'].fillna(titanic['Age'].mean())
+print(titanic.info())
+
+# 바이올린 플롯 그리기
+plt.figure(figsize=(10,6))
+
+# showmeans=False는 평균값을 표시하지 않도록 하고, showmedians=True는 중앙값을 표시하도록 함
+violin_plot = plt.violinplot()
