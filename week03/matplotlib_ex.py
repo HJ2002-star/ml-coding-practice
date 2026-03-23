@@ -101,7 +101,7 @@ plt.close
 
 """### **파이 차트 : 생존자, 사망자 비율 표현하기**"""
 
-# 사망자와 생존자의 수 계싼
+# 사망자와 생존자의 수 계산
 survived_counts = titanic['Survived'].value_counts()
 print(survived_counts)
 
@@ -109,4 +109,6 @@ print(survived_counts)
 plt.figure(figsize=(8, 8))
 plt.pie(survived_counts, labels=['Not Survived', 'Survived'], colors= ['orange','gold'],
         autopct='%0.1f%%', startangle=90, shadow=True, explode=(0,0.1))
+
+plt.title('')
 
