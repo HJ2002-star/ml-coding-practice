@@ -63,3 +63,4 @@ survived_counts = titanic[titanic['Survived'] == 1]['Sex'].value_counts()
 print(survived_counts)
 
 bars = plt.barh(survived_counts.index, survived_counts, color=['darkturquoise', 'salmon'])
+plt.title('Survived Counts by Gender on Titanic')
