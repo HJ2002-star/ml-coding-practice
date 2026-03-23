@@ -175,4 +175,4 @@ plt.fill_between(survived_counts.index.astype(str),survived_counts[1],
                  color='purple', alpha=0.9, label='Survived')
 
 
-survived_counts.index.astype(str)
+survived_counts.index.astype(str),survived_counts[0],
