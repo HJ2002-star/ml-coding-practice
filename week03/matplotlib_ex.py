@@ -125,4 +125,8 @@ print(titanic.info())
 
 # 히스토그램 그리기
 plt.figure(figsize=(10,6))
-plt.hist(titanic['Age'], bins=20, color='seagreen', en)
+plt.hist(titanic['Age'], bins=20, color='seagreen', edgecolor='black')
+
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.title('')
