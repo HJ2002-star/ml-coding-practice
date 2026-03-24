@@ -338,5 +338,5 @@ y1 = parch_counts[0].values # 사망자
 y2 = parch_counts[1].values # 생존자
 
 #plt.subplots() 함수를 사용하여 하나의 그림인 figure에 개별 서브플롯을 동시에 추가
-fig
+fig, axes = plt.subplots(2,2)
 
