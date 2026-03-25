@@ -1,4 +1,4 @@
-# -*- coding utf -*-
+# -*- coding: utf -*-
 # 타이타닉 데이터셋 불러오기
 import pandas as pd
 
@@ -97,7 +97,7 @@ plt.ylabel('Fare')
 plt.legend(handles=scatter.legend_elements()[0], title='Survived',
            labels=['Not Survived','Survived'], loc='upper right')
 plt.savefig('Figure04.png')
-plt.close
+plt.close()
 
 """### **파이 차트 : 생존자, 사망자 비율 표현하기**"""
 
