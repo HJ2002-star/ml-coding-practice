@@ -407,3 +407,5 @@ plt.ylabel('Count')
 plt.title('Distribution of Ages on the Titanic')
 plt.grid(axis='y',linestyle='--',alpha=0.7)
 
+# 이미지로 저장
+plt.savefig('Figure17.png')
