@@ -377,3 +377,4 @@ y2 = parch_counts[1].values # 생존자
 # figure와 서브 플롯 생성
 fig, ax1 = plt.subplots()
 
+ax1.plot(x, y1, '-s', color='indigo', markersize = 7, linewidth=5, alpha=0.7,label = 'Not Survived')
