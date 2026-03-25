@@ -355,3 +355,6 @@ axes[0].set_xlabel('Parch')
 axes[0].set_ylabel('Survived Count',color = 'deeppink')
 axes[0].tick_params(axis = 'y', labelcolor='deeppink')
 axes[0].legend(loc='upper right')
+
+# 제목 설정
+fig.suptitle('')
