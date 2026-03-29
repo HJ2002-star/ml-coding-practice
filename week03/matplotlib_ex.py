@@ -2,6 +2,10 @@
 # 타이타닉 데이터셋 불러오기
 import pandas as pd
 
+# 파일 경로 에러 해결용 코드
+import os  
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 # 타이타닉 csv 파일 불러오기
 titanic = pd.read_csv('3.1.1.titanic.csv')
 
