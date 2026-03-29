@@ -2,7 +2,7 @@
 # 타이타닉 데이터셋 불러오기
 import pandas as pd
 
-# 파일 경로 에러 해결용 코드
+# CSV,PNG 파일 경로 에러 해결용 코드
 import os  
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
