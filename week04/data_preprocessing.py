@@ -14,4 +14,16 @@ def load_housing_data():
         url = "https://github.com/ageron/data/raw/main/housing.tgz"
         urllib.request.urlretrieve(url, tarball_path)
         with tarfile.open(tarball_path) as housing_tarball:
-            housing_tarball.extractall([path="datasets"])
+            housing_tarball.extractall(path="datasets")
+    return pd.read_csv(Path("datasets/housing/housing.csv"))
+
+housing = load_housing_data()
+
+# 테스트 세트 만들기
+from sklearn.model_selection import train_test_split
+
+housing["imcome_cat"] = pd.cut(housing["median_income"],
+                               bins=[0., 1.5, 3.0, 4.5, 6., np.inf],
+                               labels=[1, 2, 3, 4, 5])
+
+strat_train_set, s
