@@ -37,3 +37,12 @@ for set_ in (strat_train_set, strat_test_set):
 * 'strat_train_set.drop()'은 지정한 열을 제외한 'strat_train_set'의 복사본을 만듦
 * 'inplace=True' 로 지정하지 않은 한 'strat_train_set' 자체를 수정하지 않음
 """
+
+housing = strat_train_set.drop("median_house_value", axis=1)
+housing_labels = strat_train_set["median_house_value"].copy()
+
+# 데이터 정체
+# null 값이 있는 행 확인하기
+null_rows_idx = housing.isnull().any(axis=1)
+housing.loc[null_rows_idx].head()
+
