@@ -46,3 +46,30 @@ housing_labels = strat_train_set["median_house_value"].copy()
 null_rows_idx = housing.isnull().any(axis=1)
 housing.loc[null_rows_idx].head()
 
+from sklearn.impute import SimpleImputer
+
+imputer = SimpleImputer(strategy="median")
+
+# 수치형 특성만 추출
+housing_num = housing.select_dtypes(include=[np.number])
+housing_num.head()
+
+imputer.fit(housing_num)
+
+print(imputer.statistics_)          # imputer 결과 값
+print(housing_num.median().values)  # 수동으로 계산한 중간값
+
+# 훈련 세트의 누락값을 imputer가 학습한 값으로 채우기
+X = imputer.transform(housing_num)
+
+imputer.feature_names_in_
+
+housing_tr = pd.DataFrame(X, columns=housing_num.columns,
+                          index=housing_num.index)
+housing_tr.loc[null_rows_idx].head()
+
+# 이상치 삭제
+from sklearn.ensemble import IsolationForest
+
+isolation_forest = IsolationForest(random_state=42)
+outlier_pred = is
