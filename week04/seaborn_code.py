@@ -34,3 +34,6 @@ plt.savefig('./week04/Seaborn_Figure01.jpg')
 fig = plt.figure(figsize=(15, 5))
 ax1 = fig.add_subplot(1, 2, 1)
 ax2 = fig.add_subplot(1, 2, 1)
+
+# stripplot( ) 그리기
+sns.stripplot(x='day', y='tips', hue='sex', data=tips, alpha=0.7, ax=ax2 )
