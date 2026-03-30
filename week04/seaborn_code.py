@@ -3,9 +3,6 @@
 # 사본 라이브러리 불러오기
 import seaborn as sns
 
-import os  
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
 # **팁(tips) 데이터셋 불러오기**
 tips = sns.load_dataset('tips')
 print(tips.head())
