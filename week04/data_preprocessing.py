@@ -79,10 +79,7 @@ outlier_pred
 housing = housing.iloc[outlier_pred == 1]
 housing_labels = housing_labels.iloc[outlier_pred == 1]
 
-housing_cat = housing[["ocean_proximity"]]
-housing_labels = housing_labels.iloc[outlier_pred == 1]
-
 # 텍스트와 범주형 특성 다루기
-housing_cat = housing[["ocean_proximiny"]]
+housing_cat = housing[["ocean_proximity"]]
 housing_cat.head(8)
 
