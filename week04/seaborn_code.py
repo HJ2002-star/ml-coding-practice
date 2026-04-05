@@ -10,7 +10,7 @@ print(tips.head())
 tips.info()
 
 # **범주형 변수 산점도 그래프**
- 
+
 import matplotlib.pyplot as plt
 
 # figure에 2개의 서브 플롯을 생성
@@ -18,10 +18,10 @@ fig = plt.figure(figsize=(15, 5))
 ax1 = fig.add_subplot(1, 2, 1)
 ax2 = fig.add_subplot(1, 2, 2)
 
-# stripplot() 그리기
+# stripplot( ) 그리기
 sns.stripplot(x='day', y='tip', hue='sex', data=tips, alpha=0.7, ax=ax1)
 
-# swarmplot() 그리기
+# swarmplot( ) 그리기
 sns.swarmplot(x='day', y='tip', hue='sex', data=tips, palette='Set2', alpha=0.7, ax=ax2)
 
 # 서브 플롯의 제목 설정
@@ -36,7 +36,7 @@ ax1 = fig.add_subplot(1, 2, 1)
 ax2 = fig.add_subplot(1, 2, 2)
 
 # 식사가 이루어진 시간대 파악
-# x축 변수, 데이터셋, axe 객체(1번재 그래프)
+# x축 변수, 데이터셋, axe 객체(1번째 그래프)
 sns.countplot(x='time', data=tips, ax=ax1)
 
 # 식사가 이루어진 시간대 파악과 식사가 이루어진 요일로 색상 분류
@@ -49,15 +49,15 @@ plt.savefig('./week04/Seaborn_Figure02.jpg')
 
 # **선형 회귀선 있는 산점도**
 # figure에 2개의 서브 플롯을 생성
-fig = plt.figure(figsize=(15, 5))
+fig = plt.figure(figsize=(15,5))
 ax1 = fig.add_subplot(1, 2, 1)
 ax2 = fig.add_subplot(1, 2, 2)
 
 # 산점도에 선형 회귀선 표시(fit_reg=True)
-sns.regplot(x='total_bill', y='tip', data=tips, color = 'blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'}, ax=ax1)
+sns.regplot(x='total_bill', y='tip', data=tips, color='blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'}, ax=ax1)
 
 # 산점도에 선형 회귀선 미표시(fit_reg=False)
-sns.regplot(x='total_bill', y='tip', data=tips, color = 'blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'}, ax=ax2, fit_reg=False)
+sns.regplot(x='total_bill', y='tip', data=tips, color='blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'},ax=ax2, fit_reg=False)
 
 fig.suptitle('Scatter Plots with Regression Lines', fontsize=16)
 ax1.set_title('fit_reg = True')
@@ -66,7 +66,7 @@ plt.savefig('./week04/Seaborn_Figure03.jpg')
 
 # **히스토그램과 커널 밀도 추정 그래프**
 # 히스토그램과 커널 밀도 추정 그래프 함께 그리기
-sns.histplot(tips['tip'], bins=30,kde=True,color='skyblue')
+sns.histplot(tips['tip'], bins=30, kde=True, color='skyblue')
 
 plt.title('Histogram with KDE for Tips')
 plt.savefig('./week04/Seaborn_Figure04.jpg')

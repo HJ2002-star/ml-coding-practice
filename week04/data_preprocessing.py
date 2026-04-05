@@ -1,28 +1,15 @@
 # -*- coding: utf-8 -*-
 
 # 데이터 준비
-from pathlib import Path
 import numpy as np
 import pandas as pd
-import tarfile
-import urllib.request
 
-def load_housing_data():
-    tarball_path = Path("datasets/housing.tgz")
-    if not tarball_path.is_file():
-        Path("datasets").mkdir(parents=True, exist_ok=True)
-        url = "https://github.com/ageron/data/raw/main/housing.tgz"
-        urllib.request.urlretrieve(url, tarball_path)
-        with tarfile.open(tarball_path) as housing_tarball:
-            housing_tarball.extractall(path="datasets")
-    return pd.read_csv(Path("datasets/housing/housing.csv"))
-
-housing = load_housing_data()
+housing = pd.read_csv('./week04/housing.csv')       # 오류 발생 시, ./housing.csv 파일로도 시도
 
 # 테스트 세트 만들기
 from sklearn.model_selection import train_test_split
 
-housing["imcome_cat"] = pd.cut(housing["median_income"],
+housing["income_cat"] = pd.cut(housing["median_income"],
                                bins=[0., 1.5, 3.0, 4.5, 6., np.inf],
                                labels=[1, 2, 3, 4, 5])
 
@@ -35,13 +22,13 @@ for set_ in (strat_train_set, strat_test_set):
 """
 * 원본 훈련 세트로 복원하고 타깃을 분리
 * 'strat_train_set.drop()'은 지정한 열을 제외한 'strat_train_set'의 복사본을 만듦
-* 'inplace=True' 로 지정하지 않은 한 'strat_train_set' 자체를 수정하지 않음
-"""
+* 'inplace=True'로 지정하지 않은 한 'strat_train_set' 자체를 수정하지 않음
+"""   
 
 housing = strat_train_set.drop("median_house_value", axis=1)
 housing_labels = strat_train_set["median_house_value"].copy()
 
-# 데이터 정체
+# 데이터 정제
 # null 값이 있는 행 확인하기
 null_rows_idx = housing.isnull().any(axis=1)
 housing.loc[null_rows_idx].head()
@@ -56,7 +43,7 @@ housing_num.head()
 
 imputer.fit(housing_num)
 
-print(imputer.statistics_)          # imputer 결과 값
+print(imputer.statistics_)      #imputer 결과 값
 print(housing_num.median().values)  # 수동으로 계산한 중간값
 
 # 훈련 세트의 누락값을 imputer가 학습한 값으로 채우기
@@ -86,9 +73,8 @@ housing_cat.head(8)
 from sklearn.preprocessing import OrdinalEncoder
 
 ordinal_encoder = OrdinalEncoder()
-housing_cat_encoded = ordinal_encoder.fits_trasform(housing_cat)
+housing_cat_encoded = ordinal_encoder.fit_transform(housing_cat)
 
 housing_cat_encoded[:8]
 
 ordinal_encoder.categories_
-
