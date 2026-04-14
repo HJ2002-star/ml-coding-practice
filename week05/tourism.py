@@ -13,7 +13,7 @@ def main():
     result = []
 
     print("<< 국내 입국한 외국인의 통계 데이터를 수집합니다. >>")
-    nat_cd = int(input(''))
+    nat_cd = int(input('국가 코드를 입력하세요(중국: 112 / 일본: 130 / 미국: 275) :'))
 """ [CODE 3]"""
 
 def getTourusmStatsService(nat_cd, ed_ed, nStartYear, nEndYear):
