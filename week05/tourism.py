@@ -37,6 +37,7 @@ def getTourusmStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
             jsonData = getTourusmStatsItem(yyyymm, nat_cd, ed_cd)   #[CODE 2]
             if (jsonData['reponse']['header']['resultMsg'] == 'OK'):
                 #데이터가 없는 마지막 항목인 경우 ----------------------------
+            
 
 """ [CODE 2]"""
 
