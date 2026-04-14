@@ -20,6 +20,8 @@ def main():
 
     jsonResult, result, natName, dataEND = getTourusmStatsService(nat_cd, ed_ed, nStartYear) #[CODE 3]
 
+    #파일저장 :  csv 파일
+    columns = ["입국자국가", "국가코드", "입국연월", "입국자 수"]
 """ [CODE 3]"""
 
 def getTourusmStatsService(nat_cd, ed_ed, nStartYear, nEndYear):
