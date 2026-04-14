@@ -24,12 +24,14 @@ def main():
     columns = ["입국자국가", "국가코드", "입국연월", "입국자 수"]
     result_df = pd.DataFrame(result, columns = columns)
     result_df.to_csv('./%s_%s_%d_%s.csv' % (natName, ed_cd, nStartYear, dataEND), index= False, encoding= 'cp949')
-    
+
 """ [CODE 3]"""
 
 def getTourusmStatsService(nat_cd, ed_ed, nStartYear, nEndYear):
     jsonResult = []
     result = []
+
+    for year in range(nStartYear, nEndYear+1):
 
 """ [CODE 2]"""
 
