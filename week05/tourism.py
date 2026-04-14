@@ -14,6 +14,8 @@ def main():
 
     print("<< 국내 입국한 외국인의 통계 데이터를 수집합니다. >>")
     nat_cd = int(input('국가 코드를 입력하세요(중국: 112 / 일본: 130 / 미국: 275) :'))
+    nStartYear = int(input('데이터를 몇 년부터 수집할까요? : '))
+
 """ [CODE 3]"""
 
 def getTourusmStatsService(nat_cd, ed_ed, nStartYear, nEndYear):
