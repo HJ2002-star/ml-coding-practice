@@ -59,5 +59,14 @@ def getRequestUrl(url):
 
     try:
         reponse = urllib.request.urlopen(req)
+        if reponse.getcode() == 200:
+            print("[%s] Url Request Success" % datetime.datetime.now())
+            return reponse.read().decode('utf-8')
+    except Exception as e:
+        print(e)
+        print("[%s] Error for URL : %s" % (datetime.datetime.now(), url))
+        return None
+    
+    
 def getPostData(post, jsonResult, cnt): #[CODE 3]
     title = post['title']
