@@ -59,10 +59,15 @@ def getTourusmStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
 
 def getTourusmStatsItem(yyyymm, nat_cd, ed_cd):
     service_url = "http://openapi.tour.go.kr/openapi/service/EdrcntTourismStatsService/getEdrcntTourismStatsList"
+    parameters = ""
 
 """ [CODE 1]"""
 
-def getRequestUrl(url1): #[CODE 1]
+def getRequestUrl(url): #[CODE 1]
     req = urllib.request.Request(url)
+    try:
+        response = urllib.request.urlopen(req)
+
+    except
 
 main()
