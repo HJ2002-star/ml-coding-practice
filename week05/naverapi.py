@@ -25,4 +25,5 @@ def main():
         start = jsonResponse['start'] + jsonResponse['display']
         jsonResponse = 
 
-def getNave
+def getNaverSearch(node, srcText, page_start, display):
+    base = "https://openapi.naver.com/v1/search"
