@@ -27,7 +27,7 @@ def main():
 
 """ [CODE 3]"""
 
-def getTourusmStatsService(nat_cd, ed_ed, nStartYear, nEndYear):
+def getTourusmStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
     jsonResult = []
     result = []
 
