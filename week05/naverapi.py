@@ -23,7 +23,9 @@ def main():
             getPostData(post, jsonResulton, cnt)    #[CODE 3]
 
         start = jsonResponse['start'] + jsonResponse['display']
-        jsonResponse = 
+        jsonResponse = getNaverSearch(node, srcText, start, 100) #[CODE 2]
 
 def getNaverSearch(node, srcText, page_start, display):
     base = "https://openapi.naver.com/v1/search"
+
+def
