@@ -58,10 +58,10 @@ def getRequestUrl(url):
     req.add_header("X-Naver-Client-Secret", client_secret)
 
     try:
-        reponse = urllib.request.urlopen(req)
-        if reponse.getcode() == 200:
+        response = urllib.request.urlopen(req)
+        if response.getcode() == 200:
             print("[%s] Url Request Success" % datetime.datetime.now())
-            return reponse.read().decode('utf-8')
+            return response.read().decode('utf-8')
     except Exception as e:
         print(e)
         print("[%s] Error for URL : %s" % (datetime.datetime.now(), url))
