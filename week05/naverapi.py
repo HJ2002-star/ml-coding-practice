@@ -74,6 +74,8 @@ def getPostData(post, jsonResult, cnt): #[CODE 3]
     org_link = post['originallink']
     link = post['link']
 
-    # %a: 짧은 형식의 요일 이름
-    #
-    #
+    # %a: 짧은 형식의 요일 이름 (예, 'MON', "TUE', "WED', ... )
+    # %d: 일 (예, 01, 02, 03 ...)
+    # %b: 짧은 형식의 월 이름 (예, 'Jab', 'Feb', 'Mar', ...)
+    pDate = datetime.datetime.strptime(post['pubDate'], '%a, %d %b')
+    pDate =
