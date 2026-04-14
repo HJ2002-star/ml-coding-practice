@@ -12,6 +12,10 @@ def main():
     jsonResult = []
     result = []
 
+""" [CODE 3]"""
+
 def getTourusmStatsService(nat_cd, ed_ed, nStartYear, nEndYear):
     jsonResult = []
     result = []
+
+""" [CODE 2]"""
