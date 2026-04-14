@@ -35,9 +35,9 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
         for month in range(1, 13):
             yyyymm = "{0}{1:0>2}".format(str(year), str(month))
             jsonData = getTourismStatsItem(yyyymm, nat_cd, ed_cd)   #[CODE 2]
-            if (jsonData['reponse']['header']['resultMsg'] == 'OK'):
+            if (jsonData['response']['header']['resultMsg'] == 'OK'):
                 #데이터가 없는 마지막 항목인 경우 ----------------------------
-                if jsonData['reponse']['body']['items'] == '':
+                if jsonData['response']['body']['items'] == '':
                     dataEND = "{0}{1:0>2}".format(str(year), str(month-1))
                     print("데이터 없음... \n제공되는 통계 데이터는 %s년 %s월까지입니다." % (str(year), str(month-1)))
                     break
