@@ -27,3 +27,5 @@ def getTourusmStatsItem(yyymm, nat_cd, ed_cd):
 
 def getRequestUrl(url1): #[CODE 1]
     req = urllib.request.Request(url)
+
+main()
