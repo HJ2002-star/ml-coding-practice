@@ -18,7 +18,7 @@ def main():
     eEndYear = int(input('데이터를 몇 년까지 수집할까요? : '))
     ed_cd = "E" #E: 방한외래관광객, D: 해외 출국
 
-    jsonResult, result, natName, dataEND = 
+    jsonResult, result, natName, dataEND = getTourusmStatsService(nat_cd, ed_ed, nStartYear) #[CODE 3]
 
 """ [CODE 3]"""
 
