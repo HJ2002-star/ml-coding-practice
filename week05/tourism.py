@@ -43,6 +43,8 @@ def getTourusmStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
                     break
                 #jsonData를 출력하여 확인............................................
                 print(json.dumps(jsonData,indent= 4, sort_keys= True, ensure_ascii=False))
+
+                natName = jsonData['reponse']['body']['items']['item'][]
 """ [CODE 2]"""
 
 def getTourusmStatsItem(yyyymm, nat_cd, ed_cd):
