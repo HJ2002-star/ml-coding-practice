@@ -43,7 +43,10 @@ def getNaverSearch(node, srcText, page_start, display):
     parameters = "?query=%s&start=%s&display=%s" % (urllib.parse.quote(srcText), page_start, display)
 
     url = base + node + parameters
-    responseDecode = get
-    
+    responseDecode = getRequestUrl
+
+def getRequestUrl(url):
+    req = urllib.request.Request(url)
+
 def getPostData(post, jsonResult, cnt): #[CODE 3]
     title = post['title']
