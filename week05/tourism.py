@@ -50,7 +50,7 @@ def getTourusmStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
                 ed = jsonData['reponse']['body']['items']['item']['ed']
                 print('[ %s_%s : %s]' % (natName, yyyymm, num))
                 print('------------------------------------------------------')
-                jsonResult.append({natName, nat_cd, yyyymm})
+                jsonResult.append([natName, nat_cd, yyyymm, num])
 
 """ [CODE 2]"""
 
