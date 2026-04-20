@@ -14,6 +14,8 @@ def main():
     cnt = 0
     jsonResult = []
 
+    jsonResponse = getNaverSearch(node, srcText, 1, 100)
+
 def getNaverSearch(node, srcText, page_start, display):
 
 def getRequestUrl(url):
