@@ -59,4 +59,6 @@ def getRequestUrl(url):
 
     try:
         response = urllib.request.urlopen(req)
+        if response.getcode() == 200:
+            print("[%s] Url Request Success" %)
 def getPostData(post, jsonResult, cnt): #[CODE 3]
