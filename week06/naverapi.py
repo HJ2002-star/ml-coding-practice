@@ -50,8 +50,10 @@ def getNaverSearch(node, srcText, page_start, display):
     else:
         return json.loads(responseDecode)
     
-    
+
 def getRequestUrl(url):
     req = urllib.request.Request(url)
 
+    req.add_header("X-Naver-Client-Id")
+    req.add_header("X-Naver-Client-Secret")
 def getPostData(post, jsonResult, cnt): #[CODE 3]
