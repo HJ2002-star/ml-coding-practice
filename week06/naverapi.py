@@ -7,3 +7,6 @@ client_id = '1muCmJeI4Ctd8uQEVZeo'
 client_secret = 'qUut4pYmqh'
 
 def main():
+
+def getNaverSearch(node, srcText, page_start, display):
+
