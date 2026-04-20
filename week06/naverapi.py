@@ -56,4 +56,7 @@ def getRequestUrl(url):
 
     req.add_header("X-Naver-Client-Id", client_id)
     req.add_header("X-Naver-Client-Secret", client_secret)
+
+    try:
+        response = urllib.request.urlopen(req)
 def getPostData(post, jsonResult, cnt): #[CODE 3]
