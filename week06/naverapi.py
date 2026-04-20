@@ -5,3 +5,5 @@ import json
 
 client_id = '1muCmJeI4Ctd8uQEVZeo'
 client_secret = 'qUut4pYmqh'
+
+def main():
