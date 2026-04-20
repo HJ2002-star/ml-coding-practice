@@ -22,7 +22,8 @@ def main():
             cnt += 1
             getPostData(post, jsonResult, cnt)      # [CODE 3]
         
-        start = jsonResponse['start'] + jsonResponse
+        start = jsonResponse['start'] + jsonResponse['display']
+        jsonResponse = getNaverSearch(node,srcText,start,100)   # [CODE 2]
 def getNaverSearch(node, srcText, page_start, display):
 
 def getRequestUrl(url):
