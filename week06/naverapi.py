@@ -14,7 +14,7 @@ def main():
     cnt = 0
     jsonResult = []
 
-    jsonResponse = getNaverSearch(node, srcText, 1, 100)    #[CODE 2
+    jsonResponse = getNaverSearch(node, srcText, 1, 100)    #[CODE 2]
     total = jsonResponse['total']
 
     while((jsonResponse != None) and (jsonResponse['display'] != 0)):
@@ -35,6 +35,7 @@ def main():
 
     print("가져온 데이터: %d 건" %(cnt))
     print('%s_naver_%s.json SAVED' % (srcText, node))
+
 
 def getNaverSearch(node, srcText, page_start, display):
 
