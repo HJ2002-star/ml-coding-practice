@@ -10,3 +10,7 @@ def main():
 
 def getNaverSearch(node, srcText, page_start, display):
 
+def getRequestUrl(url):
+    req = urllib.request.Request(url)
+
+def getPostData(post, jsonResult, cnt): #[CODE 3]
