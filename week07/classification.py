@@ -57,7 +57,7 @@ dummy_clf = DummyClassifier()
 dummy_clf.fit(X_train,y_train_5)
 print(any(dummy_clf.predict(X_train)))
 
-print(cross_val_score(dummy_clf, X_train, y_train, cv=3, scoring="accuracy"))
+print(cross_val_score(dummy_clf, X_train, y_train_5, cv=3, scoring="accuracy"))
 
 # 오차 행렬
 from sklearn.model_selection import cross_val_predict
@@ -86,7 +86,7 @@ print(f1_score(y_train_5, y_train_pred))
 # ROC 곡선
 from sklearn.metrics import roc_auc_score
 
-y_scores = cross_val_predict(sgd_clf, X_train, y_train, cv=3,
+y_scores = cross_val_predict(sgd_clf, X_train, y_train_5, cv=3,
                              method="decision_function")
 roc_auc_score(y_train_5, y_scores)
 
