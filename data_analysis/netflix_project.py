@@ -188,3 +188,7 @@ sns.heatmap(netflix_age_country_unstack, cmap = cmap, linewidths=2.5, annot=True
 plt.title('Here we see interesting differences between countries. Most shows in South Korea are targeted to adults, for instance.',
           fontsize=12, fontfamily='serif')
 plt.show()
+
+# 넷플릭스 데이터의 description 열 이용한 워드 클라우드 생성
+
+# Word
