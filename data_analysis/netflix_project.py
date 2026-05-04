@@ -70,3 +70,10 @@ age_group_dic = {
 }
 
 # map 함수를 이용하여 rating 컬럼의 값을 딕셔너리를 기반으로 변환하여 age_group 컬럼에 저장
+# .map( ) : 사전에 정의한 내용을 변수에 적용
+netflix['age_group'] = netflix['age_group'].map(age_group_dic)
+netflix.head(2)
+
+# 데이터 전처리 완료한 데이터셋 csv 파일로 저장
+# index=False: 데이터프레이므이 인덱스 열을 포함하지 않겠다는 뜻
+netflix.to_csv('netflix_preprocessed.csv', index=False)
