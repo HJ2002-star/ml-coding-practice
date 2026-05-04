@@ -195,3 +195,5 @@ plt.show()
 # Image: 워드 클라우드를 원하는 형태로 그리기 위해 그림을 불러오는 패키지
 from wordcloud import WordCloud
 from PIL import Image
+
+plt.figure(figsize=(15, 5))
