@@ -134,4 +134,4 @@ plt.figure(figsize=(12, 6))
 
 sns.barplot(x=genres.values, y=genres.index, hue=genres.index, palette='RdGy')
 
-plt.title('')
+plt.title('Distribution of Genres for Movies and TV Shows on Netflix')
