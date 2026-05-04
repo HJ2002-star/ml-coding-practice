@@ -78,3 +78,13 @@ netflix.head(2)
 # index=False: 데이터프레이므이 인덱스 열을 포함하지 않겠다는 뜻
 netflix.to_csv('netflix_preprocessed.csv', index=False)
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 데이터 전처리가 완료된 데이터셋 불러오기
+netflix = pd.read_csv('netflix_preprocessed.csv')
+
+# 넷플리그 브랜드 상징 색깔 시각화
+sns.palplot([])
