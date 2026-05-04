@@ -16,3 +16,17 @@ list(netflix.columns)
 # .head(3) : 데이터 처음 3개의 행 출력
 netflix.head(3)
 
+# .info() : 열에 대한 요약 정보 확인
+netflix.info()
+
+# 넥플릭스 결측치 비율 확인하기
+for i in netflix.columns :
+    missingValueRate = netflix[i].isna().sum() / len(netflix) * 100
+    if missingValueRate > 0 :
+        print("{} null rate: {}%".format(i,round(missingValueRate, 2)))
+
+#. fillna( ) : 결측치를 다른 값으로 대체하여 처리
+# 결측치 비율 : country(9.44%)
+netflix['country'] = netflix['country'].fillna('No Data')
+
+# .replace(np.nan, 'b') : 결측치를 문자열 바꾸기 함수를 통해 처리
