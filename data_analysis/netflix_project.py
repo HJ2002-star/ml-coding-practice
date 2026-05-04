@@ -165,3 +165,4 @@ netflix_age_country_unstack
 age_order = ['All', 'Older kids', 'Teens', 'Adults']
 country_order = ['United States', 'India', 'United Kingdom', 'Canada', 'Japan',
                  'France', 'South Korea', 'Spain', 'Mexico', 'Turkey']
+
