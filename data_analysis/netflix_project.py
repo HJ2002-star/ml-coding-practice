@@ -19,7 +19,7 @@ netflix.head(3)
 # .info() : 열에 대한 요약 정보 확인
 netflix.info()
 
-# 넥플릭스 결측치 비율 확인하기
+# 넷플릭스 결측치 비율 확인하기
 for i in netflix.columns :
     missingValueRate = netflix[i].isna().sum() / len(netflix) * 100
     if missingValueRate > 0 :
@@ -53,9 +53,9 @@ netflix['age_group'] = netflix['rating']
 
 # 시청 등급 코드를 더 이해하기 쉬운 표현으로 매핑할 딕셔너리 정의(key, value 선언)
 age_group_dic = {
-    'G': 'ALL',
-    'TV-G': 'ALL',
-    'TV-Y': 'ALL',
+    'G': 'All',
+    'TV-G': 'All',
+    'TV-Y': 'All',
     'PG': 'Older Kids',
     'TV-Y7': 'Older Kids',
     'TV-Y7-FV':'Older Kids',
@@ -75,7 +75,7 @@ netflix['age_group'] = netflix['age_group'].map(age_group_dic)
 netflix.head(2)
 
 # 데이터 전처리 완료한 데이터셋 csv 파일로 저장
-# index=False: 데이터프레이므이 인덱스 열을 포함하지 않겠다는 뜻
+# index=False: 데이터프레임의 인덱스 열을 포함하지 않겠다는 뜻
 netflix.to_csv('netflix_preprocessed.csv', index=False)
 
 import numpy as np
@@ -104,10 +104,10 @@ print(type_counts)
 # 5 X 5 크기의 플롯 만들기
 plt.figure(figsize=(5,5))
 
-plt.pie(type_counts, labels=type_counts.index, autopct='0.f%', startangle=100,
+plt.pie(type_counts, labels=type_counts.index, autopct='%0.f%%', startangle=100,
         explode=[0.05, 0.05], shadow=True, colors=['#b20710', '#221f1f'])
 
-plt.suptitle('Movie & TV Show distribution', fontfamily='sefig', fontsize=15, fontweight='bold')
+plt.suptitle('Movie & TV Show distribution', fontfamily='serif', fontsize=15, fontweight='bold')
 plt.title('We see more movies than TV shows on Netflix.', fontfamily='serif', fontsize=12)
 plt.show()
 
@@ -162,7 +162,7 @@ netflix_age_country_unstack
 
 # 특정 나이 그룹에 따른 특정 나라별 콘텐츠로 필터링
 # 연령, 국가 리스트
-age_order = ['All', 'Older kids', 'Teens', 'Adults']
+age_order = ['All', 'Older Kids', 'Teens', 'Adults']
 country_order = ['United States', 'India', 'United Kingdom', 'Canada', 'Japan',
                  'France', 'South Korea', 'Spain', 'Mexico', 'Turkey']
 
@@ -225,3 +225,4 @@ plt.imshow(wordcloud)
 # 축 감추기
 plt.axis('off')
 plt.show()
+
